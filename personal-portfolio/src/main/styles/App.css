@@ -1,43 +1,13 @@
 body {
-  font-family: "Arial", sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-
-.navbar {
-  display: flex;
-  justify-content: center;
-  background-color: #333;
-  padding: 15px 0;
-}
-
-.navbar a {
+  background: linear-gradient(115deg, #0c0030 14.57%, #2d137b 85.34%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
   color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  padding: 10px 15px;
-  transition: background-color 0.3s;
-}
-
-.navbar a:hover {
-  background-color: #575757;
-}
-
-.home,
-.projects,
-.about,
-.contact {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-h1,
-h2 {
-  color: #4a90e2;
+  display: inline-flex;
+  padding: 20vh 20vh 30vh 20vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 9.75rem;
 }

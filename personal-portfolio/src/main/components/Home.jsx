@@ -5,11 +5,16 @@ import About from "./About";
 import Contact from "./Contact";
 import Navbar from "./Navbar";
 
+import "./styles/Home.css";
+
+const skillStyle =
+  "mb-15 font-bold text-8xl bg-gradient-to-r from-emerald-300 via-green-500 to-yellow-300 text-transparent bg-clip-text animate-gradient";
+
 const Home = () => {
   return (
-    <div className="home">
-      <h1 className="mb-1 text-2xl">Hello, I am James Billate a</h1>
-      <p className="mb-10 font-bold text-7xl">Web Developer</p>
+    <div className="home mb-10">
+      <h1 className="mb-1 text-3xl">Hello, I am James Billate a</h1>
+      <p className={skillStyle}>Web Developer</p>
 
       <Router>
         <Navbar />

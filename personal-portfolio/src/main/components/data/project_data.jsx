@@ -2,7 +2,7 @@ const project_data = [
   {
     key: 1,
     name: "Point of Sales System",
-    image: "./data/pss.png",
+    image: "./components/images/pss.png",
     content:
       "This project enacts the real-life system that various establishments use such as department stores, fast food chains to monitor their sales and give a receipt of purchase to their shoppers.",
     github: "https://github.com/ZicronDisc/Point-Of-Sales-System",

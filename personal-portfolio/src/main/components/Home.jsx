@@ -52,7 +52,7 @@ const Home = () => {
           </>
         ) : (
           <>
-            <div className="flex flex-wrap my-5">
+            <div className="w-screen flex flex-wrap my-5">
               <div
                 className="cursor-pointer py-5 ml-15 flex-none"
                 onClick={() => setPageRender(true)}

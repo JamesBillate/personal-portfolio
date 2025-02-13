@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { motion } from "motion/react";
 
+//Routing
+import NavBar_Route from "./Navbar_Route";
+
 import Projects from "./Projects";
 import About from "./About";
 import Contact from "./Contact";
-import Navbar from "./Navbar";
 
 import "./styles/Home.css";
 
@@ -15,6 +17,7 @@ const skillStyle =
 const skillTitles = ["Web Developer", "Photographer", "Photo Editor"];
 
 const Home = () => {
+  //Animation
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -24,28 +27,40 @@ const Home = () => {
     return () => clearInterval(interval);
   });
 
+  //Page rendering
+  const [pageRender, setPageRender] = useState(true);
+
   return (
     <div className="home mb-10">
-      <h1 className="mb-1 text-3xl">Hello, I am James Billate a</h1>
-
-      <motion.p
-        className={skillStyle}
-        key={skillTitles[index]}
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: 20, opacity: 0 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-      >
-        {skillTitles[index]}
-      </motion.p>
-
       <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        {pageRender ? (
+          <>
+            <h1 className="mb-1 text-3xl">Hello, I am James Billate a</h1>
+            <motion.p
+              className={skillStyle}
+              key={skillTitles[index]}
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 20, opacity: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+            >
+              {skillTitles[index]}
+            </motion.p>
+            <NavBar_Route
+              pageRender={pageRender}
+              setPageRender={setPageRender}
+            />
+          </>
+        ) : (
+          <>
+            <button onClick={() => setPageRender(true)}>Back</button>
+            <Routes>
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </>
+        )}
       </Router>
     </div>
   );

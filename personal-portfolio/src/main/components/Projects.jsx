@@ -5,10 +5,14 @@ import projects_data from "./data/project_data";
 function Project_Card(props) {
   return (
     <>
-      <motion.div className="p-4 bg-gray-200/30 backdrop-blur-sm rounded-lg shadow-xs shadow-stone-950">
-        <img src={props.image} alt={props.name}></img>
-        <h1>{props.name}</h1>
-        <article>{props.content}</article>
+      <motion.div className="p-6 bg-gray-200/30 backdrop-blur-sm rounded-lg shadow-xs shadow-stone-950">
+        <img
+          className="mb-4 w-full h-sm object-cover rounded-md"
+          src={props.image}
+          alt={props.name}
+        />
+        <h1 className="text-3xl font-bold">{props.name}</h1>
+        <article className="mb-3 leading-relaxed">{props.content}</article>
         <a href={props.github}>GitHub</a>
       </motion.div>
     </>

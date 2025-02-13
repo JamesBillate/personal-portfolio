@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { motion } from "motion/react";
+import motion, { gradient_text } from "./animations/animations.js";
 
 //Routing
 import NavBar_Route from "./Navbar_Route";
@@ -32,16 +32,13 @@ const Home = () => {
       <Router>
         {pageRender ? (
           <>
-            <h1 className="mb-1 mt-[20vh] text-3xl">
+            <h1 className="mb-1 mt-[20vh] text-3xl text-center">
               Hello, I am James Billate a
             </h1>
             <motion.p
-              className="mb-15 pb-2 font-bold text-8xl bg-gradient-to-r from-emerald-300 via-green-500 to-yellow-300 text-transparent bg-clip-text animate-gradient"
+              className="mb-15 pb-2 font-bold text-8xl text-center bg-gradient-to-r from-emerald-300 via-green-500 to-yellow-300 text-transparent bg-clip-text animate-gradient"
               key={skillTitles[index]}
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 20, opacity: 0 }}
-              transition={{ duration: 1, ease: "easeInOut" }}
+              {...gradient_text}
             >
               {skillTitles[index]}
             </motion.p>

@@ -4,11 +4,11 @@ import motion, { gradient_text } from "./animations/animations.js";
 
 //Routing
 import NavBar_Route from "./Navbar_Route";
-
 import Projects from "./Projects.jsx";
 import About from "./About";
 import Contact from "./Contact";
 
+//Styles
 import "./styles/Home.css";
 
 const skillTitles = ["Web Developer", "Photographer", "Photo Editor"];

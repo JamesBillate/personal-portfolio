@@ -1,5 +1,6 @@
 import React from "react";
 import projects_data from "./data/project_data";
+import Header from "./Header";
 
 import motion, {
   hover_animation,
@@ -8,7 +9,8 @@ import motion, {
 
 const Projects = () => {
   return (
-    <div className="w-screen">
+    <div className="w-screen pb-15">
+      <Header pageName="Projects" />
       <div className="mx-15 grid grid-cols-1 md:grid-cols-3 gap-5">
         {projects_data.map((project) => (
           <motion.div

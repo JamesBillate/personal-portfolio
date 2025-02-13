@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { delay, motion } from "motion/react";
 
 const scroll_animation = {
   initial: { opacity: 0, y: 50 },
@@ -19,7 +19,7 @@ const hover_animation = {
   },
 };
 
-const gradient_text = {
+const gradient_text_animation = {
   initial: { y: 20, opacity: 0 },
   animate: { y: 0, opacity: 1 },
   exit: { y: 20, opacity: 0 },
@@ -27,4 +27,4 @@ const gradient_text = {
 };
 
 export default motion;
-export { hover_animation, scroll_animation, gradient_text };
+export { hover_animation, scroll_animation, gradient_text_animation };

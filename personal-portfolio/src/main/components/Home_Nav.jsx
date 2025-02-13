@@ -18,16 +18,16 @@ const Home_Nav = () => {
           transition={{ repeat: Infinity, duration: 0.6, ease: "easeInOut" }}
         />
       </Link>
-      <Link to="/about" className={linkStyle}>
-        {"/About"}
+      <Link to="/aboutme" className={linkStyle}>
+        {"/AboutMe"}
         <motion.i
           className={arrowUp}
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 0.6, ease: "easeInOut" }}
         />
       </Link>
-      <Link to="/contact" className={linkStyle}>
-        {"/Contact"}
+      <Link to="/connect" className={linkStyle}>
+        {"/Connect"}
         <motion.i
           className={arrowUp}
           animate={{ y: [0, 8, 0] }}

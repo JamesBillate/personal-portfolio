@@ -1,4 +1,4 @@
-import { delay, motion } from "motion/react";
+import { delay, motion, transform } from "motion/react";
 
 const scroll_animation = {
   initial: { opacity: 0, y: 50 },
@@ -26,5 +26,32 @@ const gradient_text_animation = {
   transition: { duration: 1, ease: "easeInOut" },
 };
 
+const socials_animation = {
+  whileHover: {
+    scale: 0.9,
+    rotate: 5,
+    color: "#7ffc03",
+    borderColor: "#7ffc03",
+    transition: {
+      type: "spring",
+      damping: 5,
+      stiffness: 100,
+      duration: 1,
+    },
+  },
+
+  whileTap: {
+    scale: 0.8,
+    rotate: 0,
+    color: "#fc9803",
+    borderColor: "#fc9803",
+  },
+};
+
 export default motion;
-export { hover_animation, scroll_animation, gradient_text_animation };
+export {
+  hover_animation,
+  scroll_animation,
+  gradient_text_animation,
+  socials_animation,
+};

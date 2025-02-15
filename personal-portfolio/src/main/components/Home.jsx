@@ -22,11 +22,11 @@ const Home = () => {
 
   return (
     <div className="home mb-10">
-      <h1 className="mb-1 mt-30 text-3xl text-center">
+      <h1 className="text-center mb-1 mt-30 text-xl md:text-1xl lg:text-2xl">
         Hello, I am James Billate a
       </h1>
       <motion.p
-        className="mb-15 pb-2 font-bold text-8xl text-center bg-gradient-to-r from-emerald-300 via-green-500 to-yellow-300 text-transparent bg-clip-text animate-gradient"
+        className="mb-15 pb-2 font-bold text-center text-6xl sm:text-7xl md:text-8xl bg-gradient-to-r from-emerald-300 via-green-500 to-yellow-300 text-transparent bg-clip-text animate-gradient"
         key={skillTitles[index]}
         {...gradient_text_animation}
       >

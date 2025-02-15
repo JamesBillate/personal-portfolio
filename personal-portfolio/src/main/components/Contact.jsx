@@ -17,7 +17,7 @@ const Contact = () => {
   return (
     <div className="w-screen">
       <Header pageName="Connect" />
-      <div className="mx-15 grid grid-cols-1 md:grid-cols-2">
+      <div className="mx-15 mt-10 grid grid-cols-1 md:grid-cols-2">
         <div className="py-5 grid grid-cols-5 gap-x-2 gap-y-5 order-2 items-center md:order-1">
           {connect_data.map((connect) => (
             <motion.a

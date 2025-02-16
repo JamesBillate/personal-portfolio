@@ -2,7 +2,7 @@ const connect_data = [
   {
     key: 1,
     icon: "fa-regular fa-envelope",
-    link: "james.billate@ciit.edu.ph",
+    link: "mailto:james.billate@ciit.edu.ph",
     hover: "Send me an email if you want to do business or professional work.",
   },
   {

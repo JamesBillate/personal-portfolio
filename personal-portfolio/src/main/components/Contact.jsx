@@ -11,9 +11,13 @@ const Contact = () => {
   //Hover on socials
   const [social, setSocial] = useState(defaultText);
 
-  function currentSocial(getSocial) {
-    setSocial(getSocial);
-  }
+  const handleMouseEnter = (hoverText) => {
+    setSocial(hoverText);
+  };
+
+  const handleMouseLeave = () => {
+    setSocial(defaultText);
+  };
 
   return (
     <div className="w-screen">
@@ -24,8 +28,8 @@ const Contact = () => {
           {connect_data.map((connect) => (
             <motion.a
               {...socials_animation}
-              onMouseEnter={() => currentSocial(connect.hover)}
-              onMouseLeave={() => currentSocial(defaultText)}
+              onMouseEnter={() => handleMouseEnter(connect.hover)}
+              onMouseLeave={handleMouseLeave}
               key={connect.key}
               href={connect.link}
               className="cursor-pointer p-5 text-4xl border border-gray-100 rounded-lg text-center"

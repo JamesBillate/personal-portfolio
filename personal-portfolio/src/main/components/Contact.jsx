@@ -22,9 +22,9 @@ const Contact = () => {
   return (
     <div className="w-screen">
       <Header pageName="Connect" />
-      <div className="mx-15 mt-10 pb-20 grid grid-cols-1 gap-15 md:grid-cols-2">
+      <div className="mx-15 mt-5 pb-20 grid grid-cols-1 gap-15 md:grid-cols-2">
         {/* Available Contacts */}
-        <div className="py-5 grid grid-cols-5 gap-x-2 gap-y-5 order-2 items-center md:order-1">
+        <div className="py-5 mt-5 md:mt-0 grid grid-cols-2 sm:grid-cols-5 gap-x-2 gap-y-5 order-2 items-center md:order-1">
           {connect_data.map((connect) => (
             <motion.a
               {...socials_animation}

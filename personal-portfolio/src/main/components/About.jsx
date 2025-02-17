@@ -5,6 +5,13 @@ import motion, {
   scroll_animation,
 } from "./animations/animations";
 
+//Images
+import gradPic from "/src/main/components/images/GradPic.jpg";
+import street1 from "/src/main/components/images/street_1.jpg";
+import street2 from "/src/main/components/images/street_2.jpg";
+import street3 from "/src/main/components/images/street_3.jpg";
+import street4 from "/src/main/components/images/street_4.jpg";
+
 const sectionHeader = "text-4xl font-bold";
 const aboutInfo = "leading-7 mt-5 text-xl";
 
@@ -42,7 +49,7 @@ const About = () => {
             <motion.img
               {...hover_animation}
               className="size-90 rounded-xl object-cover object-center md:-rotate-2"
-              src="/src/main/components/images/GradPic.jpg"
+              src={gradPic}
               alt="James Billate Grad Pic"
             />
           </div>
@@ -90,25 +97,25 @@ const About = () => {
             <motion.img
               {...hover_animation}
               className="mt-0 md:mt-20 w-full size-50 rounded-xl object-cover object-center"
-              src="/src/main/components/images/street_1.jpg"
+              src={street1}
               alt="Street Photography 1"
             />
             <motion.img
               {...hover_animation}
               className="size-50 w-full rounded-xl object-cover object-center"
-              src="/src/main/components/images/street_2.jpg"
+              src={street2}
               alt="Street Photography 2"
             />
             <motion.img
               {...hover_animation}
               className="size-50 w-full rounded-xl object-cover object-center"
-              src="/src/main/components/images/street_3.jpg"
+              src={street3}
               alt="Street Photography 3"
             />
             <motion.img
               {...hover_animation}
               className="mt-0 md:-mt-20 w-full size-50 rounded-xl object-cover object-center"
-              src="/src/main/components/images/street_4.jpg"
+              src={street4}
               alt="Street Photography 4"
             />
           </div>

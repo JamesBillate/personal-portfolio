@@ -1,8 +1,14 @@
+import pss from "/src/main/components/images/pss.png";
+import periodic from "/src/main/components/images/periodic.png";
+import convert from "/src/main/components/images/convert.png";
+import grading from "/src/main/components/images/gradingsys.png";
+import news from "/src/main/components/images/newsletter.png";
+
 const project_data = [
   {
     key: 1,
     name: "Point of Sales System",
-    image: "/src/main/components/images/pss.png",
+    image: pss,
     content:
       "This project enacts the real-life system that various establishments use such as department stores, fast food chains to monitor their sales and give a receipt of purchase to their shoppers.",
     github: "https://github.com/ZicronDisc/Point-Of-Sales-System",
@@ -10,7 +16,7 @@ const project_data = [
   {
     key: 2,
     name: "The Periodic Table",
-    image: "/src/main/components/images/periodic.png",
+    image: periodic,
     content:
       "This is the digital version of the physical periodic table that students use in school. One function of this is it can allow you to see each element's group by simply hovering in the menu to highlight whether they are included or not.",
     github: "https://github.com/ZicronDisc/Periodic-Table.github.io",
@@ -18,7 +24,7 @@ const project_data = [
   {
     key: 3,
     name: "Convert ",
-    image: "/src/main/components/images/convert.png",
+    image: convert,
     content:
       "This system simply allows you to convert your desired value to different options such as mi to km, and cm to ft and in, and lb to g and allows you to see the differences of each metric system.",
     github: "https://github.com/ZicronDisc/Convert",
@@ -26,7 +32,7 @@ const project_data = [
   {
     key: 4,
     name: "Grading System",
-    image: "/src/main/components/images/gradingsys.png",
+    image: grading,
     content:
       "This allows you to compute students' grades without any hassle of manually computing every value needed to find the final grade. It will also tell you if one computation is passed or not.",
     github: "https://github.com/ZicronDisc/Grading-System",
@@ -34,7 +40,7 @@ const project_data = [
   {
     key: 5,
     name: "Newsletter Website",
-    image: "/src/main/components/images/newsletter.png",
+    image: news,
     content:
       "This is a prototype of a news site that allows us to practice the usage of Bootstrap in our works especially the readability of the information that users will need from the newsletter.",
     github: "https://github.com/ZicronDisc/Newsletter",

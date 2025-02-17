@@ -28,8 +28,7 @@ const connect_data = [
     key: 5,
     icon: "fa-brands fa-github",
     link: "https://github.com/JamesBillate",
-    hover:
-      "To check my previous projects and its source codes, check my repositories available on Github to some coding projects.",
+    hover: "Check my previous projects available on Github.",
   },
 ];
 export default connect_data;

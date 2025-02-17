@@ -11,7 +11,7 @@ const Projects = () => {
   return (
     <div className="w-screen pb-15">
       <Header pageName="Projects" />
-      <div className="mx-15 grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="mx-15 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
         {projects_data.map((project) => (
           <motion.div
             key={project.content}

@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "./Header";
-
 import motion, {
   hover_animation,
   scroll_animation,
@@ -52,19 +51,19 @@ const About = () => {
             <p className={sectionHeader}>I am James Derick Billate</p>
             <p className={aboutInfo}>
               Currently a student programmer, taking BS Computer Science in CIIT
-              College of Arts and Technology. The interest started wayback in
-              Junior Highschool, introducing me to basic HTML, which then become
+              College of Arts and Technology. The interest started way back in
+              Junior Highschool, introducing me to basic HTML, which then became
               a motivation to pursue the field.
             </p>
             <p className={aboutInfo}>
-              Right now, I aim to become a Web Devloper, fond particularly on
-              desigining front-end. Conceptualizing with Canva and Pinterest,
-              and wireframe and prototype using Figma. I am also exploring
-              various frameworks for UI/UX, inclusing React.js, Tailwind and
+              Right now, I aim to become a Web Developer, fond particularly of
+              designing front-end. Conceptualizing with Canva and Pinterest, and
+              wireframing and prototyping using Figma. I am also exploring
+              various frameworks for UI/UX, including React.js, Tailwind, and
               Motion Frame.
             </p>
             <p className={aboutInfo}>
-              Let's make a change in digital world and create an inclusive
+              Let's make a change in the digital world and create an inclusive
               design for all.
             </p>
           </div>
@@ -75,15 +74,15 @@ const About = () => {
           <div className="order-1">
             <p className={sectionHeader}>The Creative Me</p>
             <p className={aboutInfo}>
-              Despite the focus on programming, I also have the passion towards
-              photograph. During free times at school, I take the opportunity to
-              take photos of the streets. Doens't really have the sideline for
+              Despite the focus on programming, I also have a passion for
+              photography. During free times at school, I take the opportunity
+              to take photos of the streets. I don't really have a sideline for
               this field, but it empowers my creative and management skills on
               various projects.
             </p>
             <p className={aboutInfo}>
-              If you are interested to capture the you, lets collaborate and
-              lets immotalize your uniqueness.
+              If you are interested in capturing the moment, let's collaborate
+              and immortalize your uniqueness.
             </p>
           </div>
 
@@ -92,25 +91,25 @@ const About = () => {
               {...hover_animation}
               className="mt-0 md:mt-20 w-full size-50 rounded-xl object-cover object-center"
               src="/src/main/components/images/street_1.jpg"
-              alt="James Billate Grad Pic"
+              alt="Street Photography 1"
             />
             <motion.img
               {...hover_animation}
               className="size-50 w-full rounded-xl object-cover object-center"
               src="/src/main/components/images/street_2.jpg"
-              alt="James Billate Grad Pic"
+              alt="Street Photography 2"
             />
             <motion.img
               {...hover_animation}
               className="size-50 w-full rounded-xl object-cover object-center"
               src="/src/main/components/images/street_3.jpg"
-              alt="James Billate Grad Pic"
+              alt="Street Photography 3"
             />
             <motion.img
               {...hover_animation}
               className="mt-0 md:-mt-20 w-full size-50 rounded-xl object-cover object-center"
               src="/src/main/components/images/street_4.jpg"
-              alt="James Billate Grad Pic"
+              alt="Street Photography 4"
             />
           </div>
         </motion.div>
@@ -121,10 +120,13 @@ const About = () => {
           {...scroll_animation}
         >
           <div>
-            <p className={sectionHeader + " text-center"}>Skills</p>
+            <p className={`${sectionHeader} text-center`}>Skills</p>
             <div className="grid grid-cols-2 gap-2 p-4 lg:grid-cols-4">
               {skills.map((skill) => (
-                <div className="border border-solid border-gray-100 p-2 text-center rounded-lg">
+                <div
+                  key={skill}
+                  className="border border-solid border-gray-100 p-2 text-center rounded-lg"
+                >
                   {skill}
                 </div>
               ))}
@@ -132,11 +134,14 @@ const About = () => {
           </div>
 
           <div>
-            <p className={sectionHeader + " text-center"}>Experiences</p>
+            <p className={`${sectionHeader} text-center`}>Experiences</p>
             <div className="grid grid-cols-1 gap-2 p-4">
-              {experiences.map((experience) => (
-                <div className="border border-solid border-gray-100 p-2 text-center rounded-lg">
-                  {`${experience.exp} - ${experience.position} - ${experience.year}`}
+              {experiences.map(({ exp, position, year }) => (
+                <div
+                  key={exp}
+                  className="border border-solid border-gray-100 p-2 text-center rounded-lg"
+                >
+                  {`${exp} - ${position} - ${year}`}
                 </div>
               ))}
             </div>

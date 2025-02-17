@@ -10,7 +10,7 @@ import "./styles/Home.css";
 const skillTitles = ["Web Developer", "Photographer", "Photo Editor"];
 
 const Home = () => {
-  //Animation
+  //Animation for the top skills
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -22,16 +22,22 @@ const Home = () => {
 
   return (
     <div className="home mb-10">
+      {/* Name Heading */}
       <h1 className="text-center mb-1 mt-30 text-xl md:text-1xl lg:text-2xl">
         Hello, I am James Billate a
       </h1>
+
+      {/* Top Skills */}
       <motion.p
-        className="mb-15 pb-2 font-bold text-center text-6xl sm:text-7xl md:text-8xl bg-gradient-to-r from-emerald-300 via-green-500 to-yellow-300 text-transparent bg-clip-text animate-gradient"
+        className="mb-15 pb-2 font-bold text-center text-6xl sm:text-7xl md:text-8xl bg-gradient-to-r 
+        from-emerald-300 via-green-500 to-yellow-300 text-transparent bg-clip-text animate-gradient"
         key={skillTitles[index]}
         {...gradient_text_animation}
       >
         {skillTitles[index]}
       </motion.p>
+
+      {/* Home Navigation */}
       <Home_Nav />
     </div>
   );

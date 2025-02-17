@@ -8,6 +8,7 @@ const defaultText =
   "If you are interested to work with me, get in touch and lets connect.";
 
 const Contact = () => {
+  //Hover on socials
   const [social, setSocial] = useState(defaultText);
 
   function currentSocial(getSocial) {
@@ -17,7 +18,8 @@ const Contact = () => {
   return (
     <div className="w-screen">
       <Header pageName="Connect" />
-      <div className="mx-15 mt-10 grid grid-cols-1 md:grid-cols-2">
+      <div className="mx-15 mt-10 pb-20 grid grid-cols-1 gap-15 md:grid-cols-2">
+        {/* Available Contacts */}
         <div className="py-5 grid grid-cols-5 gap-x-2 gap-y-5 order-2 items-center md:order-1">
           {connect_data.map((connect) => (
             <motion.a
@@ -32,7 +34,9 @@ const Contact = () => {
             </motion.a>
           ))}
         </div>
-        <div className="text-right order-1 md:order-2 ml-30">
+
+        {/* Heading or opening part */}
+        <div className="text-right order-1 ml-15 md:order-2 md:ml-30">
           <h1 className="text-4xl mb-4">
             Let's create innovative ideas and make it to life!
           </h1>

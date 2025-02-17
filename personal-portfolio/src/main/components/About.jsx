@@ -28,23 +28,26 @@ const experiences = [
 
 const About = () => {
   return (
-    <div className="w-screen pb-15">
+    <div className="w-screen">
       <Header pageName="AboutMe" />
-      <div className="mx-35">
+      <div className="mx-15 sm:mx-20 md:mx-35">
         {/* First Section */}
-        <motion.div className="flex gap-10 mt-5 mb-35" {...scroll_animation}>
+        <motion.div
+          className="gap-10 mt-5 mb-35 grid grid-cols-1 md:grid-cols-2"
+          {...scroll_animation}
+        >
           <div
             {...scroll_animation}
-            className="p-10 items-center justify-center flex-1"
+            className="p-10 items-center justify-center order-2 md:order-1"
           >
             <motion.img
               {...hover_animation}
-              className="size-90 rounded-xl -rotate-2 object-cover object-center"
+              className="size-90 rounded-xl object-cover object-center md:-rotate-2"
               src="/src/main/components/images/GradPic.jpg"
               alt="James Billate Grad Pic"
             />
           </div>
-          <div className="flex-1">
+          <div className="order-1 md:order-2">
             <p className="text-2xl">Hi there,</p>
             <p className={sectionHeader}>I am James Derick Billate</p>
             <p className={aboutInfo}>
@@ -68,8 +71,8 @@ const About = () => {
         </motion.div>
 
         {/* Second Section */}
-        <motion.div className="flex gap-10 my-25" {...scroll_animation}>
-          <div className="flex-1">
+        <motion.div className="my-25" {...scroll_animation}>
+          <div className="order-1">
             <p className={sectionHeader}>The Creative Me</p>
             <p className={aboutInfo}>
               Despite the focus on programming, I also have the passion towards
@@ -80,14 +83,14 @@ const About = () => {
             </p>
             <p className={aboutInfo}>
               If you are interested to capture the you, lets collaborate and
-              lets immotalize your uniquess.
+              lets immotalize your uniqueness.
             </p>
           </div>
 
-          <div className="p-10 flex-2 grid grid-cols-2 gap-5 rotate-5">
+          <div className="p-10 grid grid-cols-1 gap-5 md:grid-cols-2">
             <motion.img
               {...hover_animation}
-              className="mt-20 w-full size-50 rounded-xl object-cover object-center"
+              className="mt-0 md:mt-20 w-full size-50 rounded-xl object-cover object-center"
               src="/src/main/components/images/street_1.jpg"
               alt="James Billate Grad Pic"
             />
@@ -105,7 +108,7 @@ const About = () => {
             />
             <motion.img
               {...hover_animation}
-              className="-mt-20 w-full size-50 rounded-xl object-cover object-center"
+              className="mt-0 md:-mt-20 w-full size-50 rounded-xl object-cover object-center"
               src="/src/main/components/images/street_4.jpg"
               alt="James Billate Grad Pic"
             />
@@ -113,10 +116,13 @@ const About = () => {
         </motion.div>
 
         {/* Third Section */}
-        <motion.div className="flex gap-10 mt-5 mb-35" {...scroll_animation}>
-          <div className="flex-1">
-            <p className={sectionHeader}>Skills</p>
-            <div className="grid grid-cols-4 gap-2 p-4">
+        <motion.div
+          className="mt-5 mb-35 grid grid-cols-1 gap-10 md:grid-cols-2"
+          {...scroll_animation}
+        >
+          <div>
+            <p className={sectionHeader + " text-center"}>Skills</p>
+            <div className="grid grid-cols-2 gap-2 p-4 lg:grid-cols-4">
               {skills.map((skill) => (
                 <div className="border border-solid border-gray-100 p-2 text-center rounded-lg">
                   {skill}
@@ -125,8 +131,8 @@ const About = () => {
             </div>
           </div>
 
-          <div className="flex-1">
-            <p className={sectionHeader}>Experiences</p>
+          <div>
+            <p className={sectionHeader + " text-center"}>Experiences</p>
             <div className="grid grid-cols-1 gap-2 p-4">
               {experiences.map((experience) => (
                 <div className="border border-solid border-gray-100 p-2 text-center rounded-lg">

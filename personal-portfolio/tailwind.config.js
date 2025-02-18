@@ -8,6 +8,12 @@ export default {
         poppins: ["Poppins", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
       },
+      screens: {
+        mobile: "320px",
+        tablet: "481px",
+        laptop: "769px",
+        wide: "1025px",
+      },
     },
   },
   plugins: [],

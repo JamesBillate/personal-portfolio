@@ -20,7 +20,7 @@ const Header = (props) => {
       className={`sticky top-0 left-0 right-0 z-10 flex items-center justify-between font-semibold transition-all duration-300 ${
         isScrolled
           ? "mx-4 rounded-b-2xl bg-gray-900/70 px-7 py-4 text-sm shadow-md backdrop-blur"
-          : "mx-10 bg-transparent py-10"
+          : "mx-15 bg-transparent py-10"
       }`}
     >
       <Link

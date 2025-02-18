@@ -28,23 +28,9 @@ const Home = () => {
       </h1>
 
       {/* Top Skills */}
+
       <motion.p
-        className="text "
-        // text-4xl
-        // sm:text-6xl
-        // md:text-7xl
-        // lg:text-8xl
-        // mb-15
-        // pb-2
-        // font-bold
-        // text-center
-        // bg-gradient-to-r
-        // from-emerald-300
-        // via-green-500
-        // to-yellow-300
-        // text-transparent
-        // bg-clip-text
-        // animate-gradient
+        className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl pb-2 font-bold text-center bg-gradient-to-r  from-emerald-300  via-green-500  to-yellow-300 text-transparent bg-clip-text mb-15  animate-gradient"
         key={skillTitles[index]}
         {...gradient_text_animation}
       >

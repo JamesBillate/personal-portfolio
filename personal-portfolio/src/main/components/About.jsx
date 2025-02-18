@@ -36,7 +36,7 @@ const About = () => {
   return (
     <div className="w-screen">
       <Header pageName="AboutMe" />
-      <div className="mx-15 sm:mx-20 md:mx-35">
+      <div className="mx-15">
         {/* First Section */}
         <motion.div
           className="gap-10 mt-5 mb-35 grid grid-cols-1 md:grid-cols-2"

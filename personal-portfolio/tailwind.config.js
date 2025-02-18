@@ -1,23 +1,24 @@
-/** @type {import('tailwindcss').Config} */
-
-export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  purge: [],
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
-        roboto: ["Roboto", "sans-serif"],
+      colors: {
+        brand: "#b4d455",
       },
       screens: {
-        mobile: "320px",
-        tablet: "481px",
-        laptop: "769px",
-        wide: "1025px",
+        laptop: "64rem", // This defines the 'laptop' breakpoint (1024px)
       },
     },
   },
-  plugins: [],
-  corePlugins: {
-    backdropFilter: true,
+  variants: {
+    extend: {},
   },
+  plugins: [],
 };

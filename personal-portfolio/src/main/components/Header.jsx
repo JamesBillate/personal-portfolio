@@ -23,12 +23,11 @@ const Header = (props) => {
 
   return (
     <nav
-      className={`
-     mx-15 flex justify-between items-center sticky right-0 left-0 z-1 transition-all duration-300 ${
-       isScrolled
-         ? "bg-gray-900/70 backdrop-blur shadow-md rounded-2xl p-2 px-10 top-5 text-xl"
-         : "bg-transparent p-10 top-0 "
-     }`}
+      className={`sm:mx-15 flex justify-between items-center sticky top-0 right-0 left-0 z-10 transition-all duration-300 ${
+        isScrolled
+          ? "bg-gray-900/70 backdrop-blur shadow-md rounded-b-2xl py-1 px-5 text-sm mx-4"
+          : "bg-transparent py-10 mx-10"
+      }`}
     >
       <Link
         to="/"
@@ -42,7 +41,7 @@ const Header = (props) => {
         />
         Back
       </Link>
-      <div className="text-3xl sm:text-4xl md:text-6xl pb-2 font-semibold bg-gradient-to-r from-emerald-300 via-green-500 to-yellow-300 text-transparent bg-clip-text animate-gradient">
+      <div className="text-2xl sm:text-3xl md:text-5xl pb-2 font-semibold bg-gradient-to-r from-emerald-300 via-green-500 to-yellow-300 text-transparent bg-clip-text animate-gradient">
         {"/" + props.pageName}
       </div>
     </nav>

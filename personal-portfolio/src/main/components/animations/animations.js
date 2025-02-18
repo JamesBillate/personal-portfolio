@@ -1,4 +1,4 @@
-import { delay, motion, transform } from "motion/react";
+import { motion } from "motion/react";
 
 const scroll_animation = {
   initial: { opacity: 0, y: 50 },

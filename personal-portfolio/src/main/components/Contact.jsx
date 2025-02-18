@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Header from "./Header";
 import motion, { socials_animation } from "./animations/animations";
 
@@ -11,14 +11,6 @@ const Contact = () => {
   //Hover on socials
   const [social, setSocial] = useState(defaultText);
 
-  const handleMouseEnter = (hoverText) => {
-    setSocial(hoverText);
-  };
-
-  const handleMouseLeave = () => {
-    setSocial(defaultText);
-  };
-
   return (
     <div className="w-screen">
       <Header pageName="Connect" />
@@ -28,13 +20,13 @@ const Contact = () => {
           {connect_data.map((connect) => (
             <motion.a
               {...socials_animation}
-              onMouseEnter={() => handleMouseEnter(connect.hover)}
-              onMouseLeave={handleMouseLeave}
               key={connect.key}
               href={connect.link}
               className="cursor-pointer p-5 text-4xl border border-gray-100 rounded-lg text-center"
+              onMouseEnter={() => setSocial(connect.hover)}
+              onMouseLeave={() => setSocial(defaultText)}
             >
-              <i className={connect.icon + " w-10"} />
+              <i className={`${connect.icon} w-10`} />
             </motion.a>
           ))}
         </div>

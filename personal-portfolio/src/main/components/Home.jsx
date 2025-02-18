@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import motion, { gradient_text_animation } from "./animations/animations.js";
 
 //Routing
@@ -7,15 +7,15 @@ import Home_Nav from "./Home_Nav.jsx";
 //Styles
 import "./styles/Home.css";
 
-const skillTitles = ["Web Developer", "Photographer", "Photo Editor"];
+const titles = ["Web Developer", "Photographer", "Photo Editor"];
 
 const Home = () => {
   //Animation for the top skills
-  const [index, setIndex] = useState(0);
+  const [skillShow, setSkillShow] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % skillTitles.length);
+      setSkillShow((prevIndex) => (prevIndex + 1) % titles.length);
     }, 3000);
     return () => clearInterval(interval);
   });
@@ -28,13 +28,12 @@ const Home = () => {
       </h1>
 
       {/* Top Skills */}
-
       <motion.p
-        className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl pb-2 font-bold text-center bg-gradient-to-r  from-emerald-300  via-green-500  to-yellow-300 text-transparent bg-clip-text mb-15  animate-gradient"
-        key={skillTitles[index]}
+        className="pb-2 mb-16 text-center text-4xl font-bold text-transparent bg-gradient-to-r from-emerald-300 via-green-500 to-yellow-300 bg-clip-text sm:text-6xl md:text-7xl lg:text-8xl animate-gradient"
+        key={titles[skillShow]}
         {...gradient_text_animation}
       >
-        {skillTitles[index]}
+        {titles[skillShow]}
       </motion.p>
 
       {/* Home Navigation */}

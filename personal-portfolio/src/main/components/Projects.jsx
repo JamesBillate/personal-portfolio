@@ -1,4 +1,3 @@
-import React from "react";
 import projects_data from "./data/project_data";
 import Header from "./Header";
 
@@ -9,18 +8,18 @@ import motion, {
 
 const Projects = () => {
   return (
-    <div className="w-screen pb-15">
+    <div className="w-screen pb-16">
       <Header pageName="Projects" />
-      <div className="mx-15 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-16 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
         {projects_data.map((project) => (
           <motion.div
             key={project.content}
-            className="p-6 bg-gray-200/30 backdrop-blur-sm rounded-lg shadow-xs shadow-stone-950"
-            {...hover_animation} //Apply hover animation
-            {...scroll_animation} //Apply scroll animation
+            className="rounded-lg bg-gray-200/30 p-6 shadow-xs shadow-stone-950 backdrop-blur-sm"
+            {...hover_animation} // Apply hover animation
+            {...scroll_animation} // Apply scroll animation
           >
             <img
-              className="mb-4 w-full h-sm object-cover rounded-md"
+              className="mb-4 h-40 w-full rounded-md object-cover"
               src={project.image}
               alt={project.name}
             />
@@ -29,7 +28,7 @@ const Projects = () => {
               {project.content}
             </article>
             <a href={project.github}>
-              <i class="text-2xl fa-brands fa-github hover:text-green-400 transition duration-300"></i>
+              <i className="fa-brands fa-github text-2xl transition duration-300 hover:text-green-400"></i>
             </a>
           </motion.div>
         ))}

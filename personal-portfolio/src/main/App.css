@@ -1,13 +1,10 @@
 @import "tailwindcss";
 /* app.css or any entry CSS file */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 :root {
   --breakpoint-s: 481px;
   --breakpoint-m: 769px;
-  --breakpoint-l: 1201px; 
+  --breakpoint-l: 1201px;
 }
 
 body {

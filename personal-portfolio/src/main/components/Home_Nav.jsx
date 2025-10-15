@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 
 //Tailwind Styles
-const navStyle = "grid grid-cols-1 md:grid-cols-3 gap-5 place-items-center";
+const navStyle = "grid grid-cols-1 md:grid-cols-3 gap-5 items-center block";
 
 const linkStyle =
   "text-4xl font-semibold text-center w-60 grid grid-cols-2 md:grid-cols-1 transition-colors duration-500 ease-in-out hover:text-lime-400";

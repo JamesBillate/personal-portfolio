@@ -24,9 +24,17 @@ const Projects = () => {
               alt={project.name}
             />
             <h1 className="text-3xl font-bold">{project.name}</h1>
+            <div className="flex flex-wrap gap-2 my-3">
+              {project.skills?.map((skill) => (
+                <div className="py-1 px-2 border border-white rounded-full text-xs">
+                  {skill}
+                </div>
+              ))}
+            </div>
             <article className="mb-3 leading-relaxed">
               {project.content}
             </article>
+
             <a href={project.github}>
               <i className="fa-brands fa-github text-2xl transition duration-300 hover:text-green-400"></i>
             </a>

@@ -7,7 +7,12 @@ import Home_Nav from "./Home_Nav.jsx";
 //Styles
 import "./styles/Home.css";
 
-const titles = ["Web Developer", "Photographer", "Photo Editor"];
+const titles = [
+  "Front-end Dev",
+  "Project Manager",
+  "Photographer",
+  "Software Engineer",
+];
 
 const Home = () => {
   //Animation for the top skills
@@ -21,23 +26,24 @@ const Home = () => {
   });
 
   return (
-    <div className="home mb-10">
+    <div className="home mb-10 w-[100vw]">
       {/* Name Heading */}
-      <h1 className="text-center mb-1 mt-30 text-md md:text-xl lg:text-2xl">
+      <h1 className="text-center mb-1 mt-55 text-md md:text-xl lg:text-2xl">
         Hello, I am James Billate a
       </h1>
 
       {/* Top Skills */}
-      <motion.p
-        className="pb-2 mb-16 text-center text-4xl font-bold text-transparent bg-gradient-to-r from-emerald-300 via-green-500 to-yellow-300 bg-clip-text sm:text-6xl md:text-7xl lg:text-8xl animate-gradient"
+      <motion.div
+        className="w-[100%] pb-2 mb-16 text-center text-3xl font-bold text-transparent bg-gradient-to-r from-emerald-300 via-green-500 to-yellow-300 bg-clip-text sm:text-6xl md:text-7xl lg:text-8xl animate-gradient"
         key={titles[skillShow]}
         {...gradient_text_animation}
       >
         {titles[skillShow]}
-      </motion.p>
-
+      </motion.div>
       {/* Home Navigation */}
-      <Home_Nav />
+      <div className="flex items-center justify-center">
+        <Home_Nav />
+      </div>
     </div>
   );
 };
